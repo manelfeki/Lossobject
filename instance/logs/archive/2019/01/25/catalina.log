@@ -1,0 +1,93 @@
+2019-01-25 00:21:49,774[ost-startStop-1]  [INFO ] [.e.c.c.d.JNDIDataSourceFactory 63]   - This=org.eclipse.che.core.db.h2.H2SQLJndiDataSourceFactory@25b64862 obj=ResourceRef[className=javax.sql.DataSource,factoryClassLocation=null,factoryClassName=org.apache.naming.factory.ResourceFactory,{type=scope,content=Shareable},{type=auth,content=Container},{type=singleton,content=true},{type=factory,content=org.eclipse.che.api.CommonJndiDataSourceFactory}] name=che Context=org.apache.naming.NamingContext@26cfd5d5 environment={}
+2019-01-25 00:21:53,318[ost-startStop-1]  [INFO ] [o.f.c.i.d.DbSupportFactory 44]       - Database: jdbc:h2:che (H2 1.4)
+2019-01-25 00:21:53,358[ost-startStop-1]  [INFO ] [o.f.c.i.util.VersionPrinter 44]      - Flyway 4.2.0 by Boxfuse
+2019-01-25 00:21:53,359[ost-startStop-1]  [INFO ] [o.f.c.i.d.DbSupportFactory 44]       - Database: jdbc:h2:che (H2 1.4)
+2019-01-25 00:21:53,392[ost-startStop-1]  [INFO ] [i.f.CustomSqlMigrationResolver 158]  - Searching for sql scripts in locations [classpath:che-schema]
+2019-01-25 00:21:53,451[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbValidate 44]       - Successfully validated 42 migrations (execution time 00:00.060s)
+2019-01-25 00:21:53,467[ost-startStop-1]  [INFO ] [o.f.c.i.m.MetaDataTableImpl 44]      - Creating Metadata table: "PUBLIC"."schema_version"
+2019-01-25 00:21:53,480[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Current version of schema "PUBLIC": << Empty Schema >>
+2019-01-25 00:21:53,510[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.0.0.8.1 - 1__init.sql
+2019-01-25 00:21:53,582[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.0.0.9.1 - 1__add_index_on_workspace_temporary.sql
+2019-01-25 00:21:53,590[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.0.0.9.2 - 2__update_local_links_in_environments.sql
+2019-01-25 00:21:53,598[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.2.0.1 - 1__increase_project_attributes_values_length.sql
+2019-01-25 00:21:53,615[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.4.0.1 - 1__drop_user_to_account_relation.sql
+2019-01-25 00:21:53,672[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.4.0.2 - 2__create_missed_account_indexes.sql
+2019-01-25 00:21:53,679[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.6.0.1 - 1__add_exec_agent_where_terminal_agent_is_present.sql
+2019-01-25 00:21:53,689[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.7.0.1 - 1__add_factory.sql
+2019-01-25 00:21:53,767[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.7.0.2 - 2__remove_match_policy.sql
+2019-01-25 00:21:53,841[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.8.0.1 - 1__add_foreigh_key_indexes.sql
+2019-01-25 00:21:53,870[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.11.0.1 - 1__optimize_user_search.sql
+2019-01-25 00:21:53,888[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.19.0.0.1 - 0.1__add_permissions.sql
+2019-01-25 00:21:53,927[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.19.0.0.2 - 0.2__add_resources.sql
+2019-01-25 00:21:53,950[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 5.19.0.0.3 - 0.3__add_organization.sql
+2019-01-25 00:21:53,965[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.1 - 1__add_path_to_serverconf.sql
+2019-01-25 00:21:53,974[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.2 - 2__rename_agents_to_installers.sql
+2019-01-25 00:21:53,982[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.3 - 3__add_installer.sql
+2019-01-25 00:21:53,990[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.3.1 - 3.1__remove_old_recipe_permissions.sql
+2019-01-25 00:21:53,998[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.4 - 4__remove_old_recipe.sql
+2019-01-25 00:21:54,011[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.5 - 5__add_machine_env.sql
+2019-01-25 00:21:54,016[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.6 - 6__remove_snapshots.sql
+2019-01-25 00:21:54,022[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.7 - 7__add_machine_volumes.sql
+2019-01-25 00:21:54,028[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.8 - 8__add_serverconf_attributes.sql
+2019-01-25 00:21:54,038[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.9 - 9__increase_externalmachine_env_value_length.sql
+2019-01-25 00:21:54,045[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.10 - 10__move_dockerimage_recipe_location_to_content.sql
+2019-01-25 00:21:54,051[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.11 - 11__increase_workspace_attributes_values_length.sql
+2019-01-25 00:21:54,058[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.0.0.12 - 12__remove_stack_sources.sql
+2019-01-25 00:21:54,084[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.3.0.1 - 1__add_fk_indexes.sql
+2019-01-25 00:21:54,096[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.3.0.1.1 - 1.1__add_fk_indexes.sql
+2019-01-25 00:21:54,103[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.4.0.1 - 1__add_workspace_expirations.sql
+2019-01-25 00:21:54,110[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.4.0.2 - 2__add_signature_key.sql
+2019-01-25 00:21:54,129[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.4.0.3 - 3__add_k8s_runtimes.sql
+2019-01-25 00:21:54,143[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.10.0.1 - 1__add_workspace_cfg_attributes.sql
+2019-01-25 00:21:54,155[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.10.0.2 - 2__change_signature_key_pair_id.sql
+2019-01-25 00:21:54,172[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.11.0.1 - 1__add_signature_key_constraints.sql
+2019-01-25 00:21:54,193[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.12.0.1 - 1__rename_project_attributes_values_field.sql
+2019-01-25 00:21:54,199[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.15.0.1 - 1__remove_not_null_constraint_from_env_name_fields.sql
+2019-01-25 00:21:54,205[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.15.0.2 - 2__add_commands_to_k8s_runtime.sql
+2019-01-25 00:21:54,212[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.16.0.1 - 1__increase_workspace_config_attributes_values_length.sql
+2019-01-25 00:21:54,220[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.16.0.2 - 2__create_workspace_activity_table.sql
+2019-01-25 00:21:54,237[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.16.0.3 - 3__bootstrap_ws_activity_data.sql
+2019-01-25 00:21:54,245[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Migrating schema "PUBLIC" to version 6.17.0.1 - 1__convert_enums_to_strings.sql
+2019-01-25 00:21:54,251[ost-startStop-1]  [INFO ] [o.f.c.i.command.DbMigrate 44]        - Successfully applied 42 migrations to schema "PUBLIC" (execution time 00:00.785s).
+2019-01-25 00:21:56,039[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.exec:1.0.0' added to the registry.
+2019-01-25 00:21:56,043[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.php:2.0.1' added to the registry.
+2019-01-25 00:21:56,046[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.git-credentials:1.0.0' added to the registry.
+2019-01-25 00:21:56,049[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.clangd:1.0.0' added to the registry.
+2019-01-25 00:21:56,052[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.java:1.0.1' added to the registry.
+2019-01-25 00:21:56,057[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.php:5.4.0' added to the registry.
+2019-01-25 00:21:56,071[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.exec:1.0.1' added to the registry.
+2019-01-25 00:21:56,075[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.unison:1.0.0' added to the registry.
+2019-01-25 00:21:56,167[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ws-agent:1.0.0' added to the registry.
+2019-01-25 00:21:56,170[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.golang:0.1.7' added to the registry.
+2019-01-25 00:21:56,188[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.terminal:1.0.0' added to the registry.
+2019-01-25 00:21:56,200[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ws-agent:1.0.1' added to the registry.
+2019-01-25 00:21:56,203[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.camel:1.0.0' added to the registry.
+2019-01-25 00:21:56,206[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.yaml:1.0.0' added to the registry.
+2019-01-25 00:21:56,209[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.python:1.0.3' added to the registry.
+2019-01-25 00:21:56,213[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ssh:1.0.0' added to the registry.
+2019-01-25 00:21:56,216[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.json:1.0.1' added to the registry.
+2019-01-25 00:21:56,220[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.csharp:1.0.1' added to the registry.
+2019-01-25 00:21:56,223[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.php:5.3.7' added to the registry.
+2019-01-25 00:21:56,229[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.terminal:1.0.1' added to the registry.
+2019-01-25 00:21:56,239[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.js-ts:1.0.1' added to the registry.
+2019-01-25 00:21:56,244[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ws-agent:1.0.3' added to the registry.
+2019-01-25 00:21:56,254[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ls.python:1.0.4' added to the registry.
+2019-01-25 00:21:56,271[ost-startStop-1]  [INFO ] [a.i.s.i.LocalInstallerRegistry 79]   - Installer 'org.eclipse.che.ws-agent:1.0.2' added to the registry.
+2019-01-25 00:21:56,280[ost-startStop-1]  [INFO ] [.i.d.l.p.LocalProjectsMigrator 50]   - Starting migration of workspace project files
+2019-01-25 00:21:56,299[ost-startStop-1]  [INFO ] [o.e.c.a.w.s.WorkspaceRuntimes 165]   - Configured factories for environments: '[compose, dockerimage, dockerfile]'
+2019-01-25 00:21:56,299[ost-startStop-1]  [INFO ] [o.e.c.a.w.s.WorkspaceRuntimes 166]   - Registered infrastructure 'docker'
+2019-01-25 00:21:56,303[ost-startStop-1]  [WARN ] [o.e.c.a.w.s.WorkspaceRuntimes 578]   - Not recoverable infrastructure: 'docker'
+2019-01-25 00:21:56,694[ost-startStop-1]  [WARN ] [o.e.c.a.w.s.stack.StackLoader 134]   - No configured image found for stack che-in-che
+2019-01-25 00:21:56,704[ost-startStop-1]  [INFO ] [o.e.c.a.w.s.stack.StackLoader 104]   - Stacks initialization finished
+2019-01-25 00:21:56,919[ost-startStop-1]  [INFO ] [.c.i.d.c.DockerRegistryChecker 49]   - Probing registry 'http://localhost:5000'
+2019-01-25 00:21:56,951[ost-startStop-1]  [WARN ] [.c.i.d.c.DockerRegistryChecker 59]   - Docker registry http://localhost:5000 is not available, which means that you won't be able to save snapshots of your workspaces.
+How to configure registry?
+	Local registry  -> https://docs.docker.com/registry/
+	Remote registry -> set up 'che.docker.registry.auth.*' properties
+2019-01-25 00:21:57,163[ted-scheduler-0]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-25 01:21:56,963[ted-scheduler-9]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-25 02:21:56,964[ted-scheduler-6]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-25 03:21:56,965[ted-scheduler-3]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-25 04:21:56,963[ted-scheduler-4]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-25 05:21:56,974[ted-scheduler-3]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-25 06:21:56,963[ted-scheduler-1]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
