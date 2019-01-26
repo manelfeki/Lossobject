@@ -13,10 +13,10 @@ exports.object_add = function (req, res) {
     );
 
     lostobject.save(function (err) {
-        if (err) {
-            return next(err);
-        }
-        res.send('object Created successfully')
+        if(!err)
+            res.redirect('all')
+        else
+            res.send(err)
     })
 };
 

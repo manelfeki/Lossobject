@@ -1,0 +1,86 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title 1 List Of Lost Objects
+    // Bootstrap core CSS
+    Style
+        include css/bootstrap.min.css
+        include css/1-col-portfolio.css
+    script
+        include vendor/jquery/jquery.min.js
+        include vendor/bootstrap/js/bootstrap.bundle.min.js
+        include vendor/popup.js
+
+  body
+    // Navigation
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href='#') Lost And Found
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='all') Home            
+            li.nav-item.active
+              a.nav-link(href='add') 
+                | Add an object
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='#') Contact
+    // Page Content
+    .container
+      // Page Heading
+      h1.my-4
+
+      #testmodal.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h4.modal-title Add a lost object
+          .modal-body
+            -data = data || {}
+            form(action="addObject" method="POST" class="form-registration")
+                label(for="name") Name:
+                input(
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                value=data.name
+                )
+
+                label(for="lossAddress") Address:
+                input(
+                type="text"
+                id="lossAddress"
+                name="lossAddress"
+                class="form-control"
+                value=data.lossAddress
+                )
+
+                label(for="contact") Contact:
+                input(
+                type="text"
+                id="contact"
+                name="contact"
+                class="form-control"
+                value=data.contact
+                )
+                hr
+                input(
+                type="submit"
+                value="Submit"
+                class="btn btn-lg btn-primary btn-block"
+                )
+        hr 
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © Lost Object 2018
+      // /.container
+
