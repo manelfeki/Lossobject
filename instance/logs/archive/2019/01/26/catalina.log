@@ -1,0 +1,8 @@
+2019-01-26 00:22:06,413[ted-scheduler-3]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-26 01:22:06,394[ted-scheduler-1]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-26 02:22:06,395[ted-scheduler-1]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-26 03:22:06,395[ted-scheduler-4]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-26 10:21:43,365[ted-scheduler-1]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-26 11:21:43,366[ted-scheduler-1]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-26 12:21:43,369[ted-scheduler-1]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-26 13:21:43,365[ted-scheduler-7]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []

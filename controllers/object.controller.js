@@ -1,14 +1,14 @@
 const Object = require('../models/object.model');
 const mongoose = require('mongoose');
+var lostObjects;
 
-
-//add new object
+// Add new object
 exports.object_add = function (req, res) {
     let lostobject = new Object(
         {
             name: req.body.name,
             lossAddress: req.body.lossAddress,
-			contact: req.body.contact
+            contact: req.body.contact
         }
     );
 
@@ -20,14 +20,13 @@ exports.object_add = function (req, res) {
     })
 };
 
-//find all the objects
-exports.object_details = function (req, res) {
-    Object.find({}).exec(function(err, result) {
-    if (!err) {
-	  res.send(result)
+// Find all the objects
+async function getLostObjects() {
+    lostObjects = await Object.find({});
+}
 
-    } else {
-      res.send('Error in first query. ' + err)
-    };
-      });
-};
+// Export getLostObjects
+exports.getLostObjects = async function () {
+    await getLostObjects();
+    return lostObjects;
+}

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	table.listing-table.table-dark.table-striped
+		tr
+			th Name
+			th Address
+			th Contact
+		each object in data
+			tr
+				td=object.name 
+				td=object.lossAddress
+				td=object.contact
+
+
+	

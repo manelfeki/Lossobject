@@ -102,3 +102,5 @@ How to configure registry?
 2019-01-25 19:22:06,399[ted-scheduler-5]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
 2019-01-25 20:22:06,394[ted-scheduler-0]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
 2019-01-25 21:22:06,394[ted-scheduler-0]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-25 22:22:06,394[ted-scheduler-9]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
+2019-01-25 23:22:06,396[ted-scheduler-9]  [INFO ] [ockerAbandonedResourcesCleaner 121]  - List containers registered in the api: []
