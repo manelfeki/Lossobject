@@ -24,18 +24,18 @@ html(lang='en')
         #navbarResponsive.collapse.navbar-collapse
           ul.navbar-nav.ml-auto
             li.nav-item.active
-              a.nav-link(href='all')
+              a.nav-link(href='1')
                 | Home
                 span.sr-only (current)
             li.nav-item
-              a.nav-link(href='add') Add an object
+              a.nav-link(href='../add') Add an object
             li.nav-item
               a.nav-link(href='#') Contact
     // Page Content
     .container
       // Page Heading
-      h1.my-4
-        | Page Heading
+      h5.my-4
+        br
       // Json data
       each lostobject in data
         .row
@@ -50,25 +50,41 @@ html(lang='en')
                 | #{lostobject.contact}
         hr 
       // Pagination
-      ul.pagination.justify-content-center
-        li.page-item
-          a.page-link(href='#', aria-label='Previous')
-            span(aria-hidden='true') «
-            span.sr-only Previous
-        li.page-item
-          a.page-link(href='#') 1
-        li.page-item
-          a.page-link(href='#') 2
-        li.page-item
-          a.page-link(href='#') 3
-        li.page-item
-          a.page-link(href='#', aria-label='Next')
-            span(aria-hidden='true') »
-            span.sr-only Next
+
+      if pages > 1
+        ul.pagination.justify-content-center
+          if current > 1
+          li.page-item
+            a.page-link(href='1')  &laquo;
+          - var x = 1
+          if current > 3
+          - x = x + (current - 1)
+          if (x !== 1)
+            li.page-item.disabled
+                a.page-link(href='#') ...
+          - for (x; x <= pages; x++)
+            if( current == x)
+              li.page-item.active
+                a.page-link(href= ""+x )
+                  = current
+            else
+              li.page-item
+                a.page-link(href= ""+x )
+                  = x
+            if x == (current + 4)
+                li.page-item.disabled
+                  a.page-link(href="#") ...
+                  - break
+          if current != pages
+          li.page-item
+              - var f = Math.floor(pages)
+              a.page-link(href= ""+f) &raquo;
+
+
     // /.container
     // Footer
     footer.py-5.bg-dark
       .container
-        p.m-0.text-center.text-white Copyright © Lost Object 2018
+        p.m-0.text-center.text-white Copyright © Lost And Found 2018
       // /.container
 

@@ -21,12 +21,15 @@ exports.object_add = function (req, res) {
 };
 
 // Find all the objects
-async function getLostObjects() {
-    lostObjects = await Object.find({});
+async function getLostObjects(page) {
+    var perPage = 3
+    lostObjects = await Object.find({})
+                              .skip((perPage * page) - perPage)
+                              .limit(perPage);
 }
 
 // Export getLostObjects
-exports.getLostObjects = async function () {
-    await getLostObjects();
+exports.getLostObjects = async function (page) {
+    await getLostObjects(page);
     return lostObjects;
 }
