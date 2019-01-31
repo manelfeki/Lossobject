@@ -5,7 +5,8 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(name='description', content='')
     meta(name='author', content='')
-    title 1 List Of Lost Objects
+    title List Of Lost Objects
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
     // Bootstrap core CSS
     Style
         include css/bootstrap.min.css
@@ -28,9 +29,9 @@ html(lang='en')
                 | Home
                 span.sr-only (current)
             li.nav-item
-              a.nav-link(href='../add') Add an object
+              a.nav-link(href='/objects/add') Add an object
             li.nav-item
-              a.nav-link(href='#') Contact
+              a.nav-link(href='/logout') Logout
     // Page Content
     .container
       // Page Heading
@@ -45,8 +46,10 @@ html(lang='en')
             .col-md-5
              h3.title=lostobject.name
              p
+                span.fa.fa-map-marker
                 | #{lostobject.lossAddress}
                 br
+                span.fa.fa-phone
                 | #{lostobject.contact}
         hr 
       // Pagination

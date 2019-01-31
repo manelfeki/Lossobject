@@ -1,0 +1,61 @@
+doctype html
+html
+  head
+    title Node Authentication
+    Style
+        include ../css/bootstrap.min.css
+        include ../css/1-col-portfolio.css
+    script
+        include ../vendor/jquery/jquery.min.js
+        include ../vendor/bootstrap/js/bootstrap.bundle.min.js
+    style.
+      body        { padding-top:80px; }
+  body
+    // Navigation
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href='#') Lost And Found
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item.active
+              a.nav-link(href='/objects/all/1')
+                | Home
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='/objects/add') Add an object
+    // Page Content
+    .container
+      .col-sm-6.col-sm-offset-3 
+        if (message.length > 0) 
+          .alert.alert-danger= message 
+        #testmodal.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h4.modal-title Login
+            .modal-body
+              // LOGIN FORM
+              form(action='/login', method='post')
+                .form-group
+                  label Email
+                  input.form-control(type='text', name='email')
+                .form-group
+                  label Password
+                  input.form-control(type='password', name='password')
+                button.btn.btn-warning.btn-lg(type='submit') Login
+              hr
+              p
+                | Need an account? 
+                a(href='/signup') Signup
+              p
+                | Or go 
+                a(href='/') home
+                | .
+    // /.container
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © Lost And Found 2018
+      // /.container

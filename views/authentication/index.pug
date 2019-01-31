@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    title Lost And Find Authentication
+    // load fontawesome
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+    Style
+        include ../css/bootstrap.min.css
+        include ../css/1-col-portfolio.css
+    script
+        include ../vendor/jquery/jquery.min.js
+        include ../vendor/bootstrap/js/bootstrap.bundle.min.js
+
+  body
+    // Navigation
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href='#') Lost And Found
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item.active
+              a.nav-link(href='/objects/all/1')
+                | Home
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='/objects/add') Add an object
+    // Page Content
+    .container
+      // Page Heading
+      h5.my-4
+        br
+        br
+        br
+      .jumbotron.text-center
+        h1
+          span.fa.fa-lock
+          |  Lost And Find Authentication
+        p Login or Register with:
+        a.btn.btn-default(href='/login')
+          span.fa.fa-user
+          |  Login
+        a.btn.btn-default(href='/signup')
+          span.fa.fa-user
+          |  Signup
+        br
+        br
+        br
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © Lost And Found 2018
+      // /.container

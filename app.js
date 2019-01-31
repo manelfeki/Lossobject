@@ -1,34 +1,52 @@
-const express = require('express')
+// Load all requirements for the app
+const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
+const passport = require('passport');
+const flash = require('connect-flash');
+
+const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-// Imports routes for the objects
-const object = require('./routes/object.routes'); 
-// initialize our express app
-const app = express()
-// Set up mongoose connection
-mongoose.connect("mongodb://localhost:27017/lossobject", {useNewUrlParser: true}, 
-(err) => {
-    if (!err) {
-        console.log('Connection successful')
-    }
-    else {
-        console.log('Error in DB connection ' + err)
-    }
-});
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+const session = require('express-session');
+const port = 3000; 
 
+mongoose.connect("mongodb://localhost:27017/lossobject", {
+        useNewUrlParser: true
+    },
+    (err) => {
+        if (!err) {
+            console.log('Connection successful')
+        } else {
+            console.log('Error in DB connection ' + err)
+        }
+    });
+
+require('./config/passport')(passport); // Pass passport for configuration
+
+app.use(morgan('dev')); // Log every request to the console
+app.use(cookieParser()); // Read cookies (needed for auth)
+
+app.use(session({
+    secret: 'This is just a random secret'
+})); // Session secret
+app.use(passport.initialize());
+app.use(passport.session()); // Persistent login sessions
+app.use(flash()); // Use connect-flash for flash messages stored in session
+
+// Set the view engine for the app to Pug 
 app.set('view engine', 'pug')
-// to support JSON-encoded bodies
+// To support JSON-encoded bodies
 app.use(bodyParser.json());
-// to support URL-encoded bodies
-app.use(bodyParser.urlencoded({extended: true}));
-app.use('/objects', object);
+// To support URL-encoded bodies
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
-app.get('/', function (req, res) {
-  res.render('index', { title: 'Hey', message: 'Hello there!'});
-});
+// Load our app routes
+require('./routes/user.routes')(app, passport);
+require('./routes/object.routes')(app);
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(port, function () {
+    console.log('Example app listening on port ' + port + '!')
 })
