@@ -3,8 +3,8 @@ module.exports = function (app, passport) {
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================
-    app.get('/', function (req, res) {
-        res.render('authentication/index'); // load the index file
+    app.get('/', isLoggedIn, function (req, res) {
+        res.redirect('/objects/all/1'); // load the index file
     });
 
     // =====================================
@@ -45,7 +45,7 @@ module.exports = function (app, passport) {
     // =====================================
     app.get('/logout', function (req, res) {
         req.logout();
-        res.redirect('/objects/all/1');
+        res.render('authentication/index');
     });
 };
 
@@ -57,5 +57,5 @@ function isLoggedIn(req, res, next) {
         return next();
 
     // If he isn't redirect him to the lgoin page
-    res.redirect('/');
+    res.render('authentication/index');
 }
